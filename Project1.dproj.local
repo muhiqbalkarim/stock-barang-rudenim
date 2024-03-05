@@ -1,9 +1,9 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <BorlandProject>
 	<Transactions>
-    <Transaction>2024/03/04 14:42:58.000.492,=C:\Users\muhiq\OneDrive\Dokumen\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
-    <Transaction>2024/03/04 14:45:39.000.132,C:\Users\muhiq\OneDrive\Dokumen\Embarcadero\Studio\Projects\stock-barang-rudenim\Unit1.pas=C:\Users\muhiq\OneDrive\Dokumen\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
-    <Transaction>2024/03/04 14:45:39.000.132,C:\Users\muhiq\OneDrive\Dokumen\Embarcadero\Studio\Projects\stock-barang-rudenim\Unit1.fmx=C:\Users\muhiq\OneDrive\Dokumen\Embarcadero\Studio\Projects\Unit1.fmx</Transaction>
-    <Transaction>2024/03/04 14:45:42.000.533,C:\Users\muhiq\OneDrive\Dokumen\Embarcadero\Studio\Projects\stock-barang-rudenim\Project1.dproj=C:\Users\muhiq\OneDrive\Dokumen\Embarcadero\Studio\Projects\Project1.dproj</Transaction>
+    <Transaction>2024/03/05 21:21:48.000.873,=C:\Users\muhiq\OneDrive\Dokumen\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2024/03/05 21:27:49.000.752,C:\Users\muhiq\OneDrive\Dokumen\stock-barang-rudenim\Unit1.pas=C:\Users\muhiq\OneDrive\Dokumen\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2024/03/05 21:27:49.000.752,C:\Users\muhiq\OneDrive\Dokumen\stock-barang-rudenim\Unit1.dfm=C:\Users\muhiq\OneDrive\Dokumen\Embarcadero\Studio\Projects\Unit1.dfm</Transaction>
+    <Transaction>2024/03/05 21:27:52.000.780,C:\Users\muhiq\OneDrive\Dokumen\stock-barang-rudenim\Project1.dproj=C:\Users\muhiq\OneDrive\Dokumen\Embarcadero\Studio\Projects\Project1.dproj</Transaction>
   </Transactions>
 </BorlandProject>

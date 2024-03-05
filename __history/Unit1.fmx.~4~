@@ -1,0 +1,137 @@
+object Form1: TForm1
+  Tag = 2
+  Left = 0
+  Top = 2
+  Caption = 'Form1'
+  ClientHeight = 524
+  ClientWidth = 780
+  Position = Designed
+  FormFactor.Width = 320
+  FormFactor.Height = 480
+  FormFactor.Devices = [Desktop]
+  OnCreate = FormCreate
+  Top = 2
+  DesignerMasterStyle = 0
+  object Label1: TLabel
+    Anchors = []
+    StyledSettings = [Family, FontColor]
+    Position.X = 285.000000000000000000
+    Position.Y = 21.000000000000000000
+    Size.Width = 201.000000000000000000
+    Size.Height = 33.000000000000000000
+    Size.PlatformDefault = False
+    TextSettings.Font.Size = 26.000000000000000000
+    TextSettings.Font.StyleExt = {00060000000000000004000000}
+    Text = 'Data ATK Umum'
+    TabOrder = 1
+  end
+  object Label2: TLabel
+    Position.X = 293.000000000000000000
+    Position.Y = 62.000000000000000000
+    Size.Width = 180.000000000000000000
+    Size.Height = 17.000000000000000000
+    Size.PlatformDefault = False
+    Text = 'Rumah Detensi Imigrasi Makassar'
+    TabOrder = 3
+  end
+  object Label3: TLabel
+    Position.X = 64.000000000000000000
+    Position.Y = 88.000000000000000000
+    Size.Width = 184.000000000000000000
+    Size.Height = 17.000000000000000000
+    Size.PlatformDefault = False
+    Text = 'waktu'
+    TabOrder = 4
+  end
+  object Label4: TLabel
+    Position.X = 64.000000000000000000
+    Position.Y = 104.000000000000000000
+    Size.Width = 57.000000000000000000
+    Size.Height = 17.000000000000000000
+    Size.PlatformDefault = False
+    Text = 'jam'
+    TabOrder = 5
+  end
+  object GroupBox1: TGroupBox
+    Position.X = 64.000000000000000000
+    Position.Y = 129.000000000000000000
+    Size.Width = 641.000000000000000000
+    Size.Height = 368.000000000000000000
+    Size.PlatformDefault = False
+    Text = 'Ambil Barang'
+    TabOrder = 7
+    object Label5: TLabel
+      Position.X = 16.000000000000000000
+      Position.Y = 24.000000000000000000
+      Text = 'Kode Barang'
+      TabOrder = 38
+    end
+    object kodebarang: TEdit
+      Touch.InteractiveGestures = [LongTap, DoubleTap]
+      TabOrder = 39
+      Position.X = 16.000000000000000000
+      Position.Y = 49.000000000000000000
+      Enabled = False
+    end
+    object namabarang: TEdit
+      Touch.InteractiveGestures = [LongTap, DoubleTap]
+      TabOrder = 40
+      Position.X = 136.000000000000000000
+      Position.Y = 49.000000000000000000
+      Size.Width = 165.000000000000000000
+      Size.Height = 22.000000000000000000
+      Size.PlatformDefault = False
+    end
+    object Label6: TLabel
+      Position.X = 136.000000000000000000
+      Position.Y = 24.000000000000000000
+      Text = 'Nama Barang'
+      TabOrder = 41
+      object Label7: TLabel
+        Position.X = 184.000000000000000000
+        Size.Width = 57.000000000000000000
+        Size.Height = 17.000000000000000000
+        Size.PlatformDefault = False
+        Text = 'Jumlah'
+        TabOrder = 4
+        object Label8: TLabel
+          Position.X = 120.000000000000000000
+          Size.Width = 73.000000000000000000
+          Size.Height = 17.000000000000000000
+          Size.PlatformDefault = False
+          Text = 'Penerima'
+          TabOrder = 4
+          object penerima: TEdit
+            Touch.InteractiveGestures = [LongTap, DoubleTap]
+            TabOrder = 4
+            Position.Y = 25.000000000000000000
+          end
+        end
+      end
+    end
+    object jumlahambil: TEdit
+      Touch.InteractiveGestures = [LongTap, DoubleTap]
+      TabOrder = 42
+      Position.X = 322.000000000000000000
+      Position.Y = 49.000000000000000000
+    end
+    object Grid1: TGrid
+      CanFocus = True
+      ClipChildren = True
+      Position.X = 16.000000000000000000
+      Position.Y = 79.000000000000000000
+      Size.Width = 609.000000000000000000
+      Size.Height = 242.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 43
+      Viewport.Width = 605.000000000000000000
+      Viewport.Height = 217.000000000000000000
+    end
+    object Button1: TButton
+      Position.X = 545.000000000000000000
+      Position.Y = 329.000000000000000000
+      TabOrder = 44
+      Text = 'Ok'
+    end
+  end
+end
