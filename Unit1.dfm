@@ -2,8 +2,8 @@ object Form1: TForm1
   Left = 270
   Top = 27
   Caption = 'Stock Barang'
-  ClientHeight = 678
-  ClientWidth = 877
+  ClientHeight = 624
+  ClientWidth = 847
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -11,13 +11,14 @@ object Form1: TForm1
   Font.Name = 'Segoe UI'
   Font.Style = []
   Position = poDesigned
+  OnClose = FormClose
   DesignSize = (
-    877
-    678)
+    847
+    624)
   TextHeight = 15
   object Label1: TLabel
-    Left = 262
-    Top = 35
+    Left = 263
+    Top = 29
     Width = 325
     Height = 54
     Anchors = []
@@ -28,12 +29,12 @@ object Form1: TForm1
     Font.Name = 'Segoe UI'
     Font.Style = [fsBold]
     ParentFont = False
-    ExplicitLeft = 264
-    ExplicitTop = 32
+    ExplicitLeft = 273
+    ExplicitTop = 33
   end
   object Label2: TLabel
-    Left = 278
-    Top = 88
+    Left = 279
+    Top = 79
     Width = 291
     Height = 28
     Anchors = []
@@ -44,64 +45,89 @@ object Form1: TForm1
     Font.Name = 'Segoe UI'
     Font.Style = []
     ParentFont = False
-    ExplicitLeft = 280
-    ExplicitTop = 83
+    ExplicitLeft = 289
+    ExplicitTop = 85
+  end
+  object Label6: TLabel
+    Left = 64
+    Top = 592
+    Width = 5
+    Height = 25
+    Anchors = []
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -18
+    Font.Name = 'Segoe UI'
+    Font.Style = [fsBold]
+    ParentFont = False
+  end
+  object Label7: TLabel
+    Left = 702
+    Top = 589
+    Width = 5
+    Height = 25
+    Anchors = []
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -18
+    Font.Name = 'Segoe UI'
+    Font.Style = [fsBold]
+    ParentFont = False
   end
   object GroupBox1: TGroupBox
-    Left = 55
-    Top = 205
+    Left = 40
+    Top = 172
     Width = 777
-    Height = 453
+    Height = 423
     Anchors = []
     Caption = 'Barang Masuk'
     TabOrder = 0
-    ExplicitLeft = 51
-    ExplicitTop = 173
     object Label3: TLabel
-      Left = 24
+      Left = 20
       Top = 40
       Width = 67
       Height = 15
       Caption = 'Kode Barang'
     end
     object Label4: TLabel
-      Left = 149
+      Left = 125
       Top = 40
       Width = 72
       Height = 15
       Caption = 'Nama Barang'
     end
     object Label5: TLabel
-      Left = 448
+      Left = 393
       Top = 40
       Width = 38
       Height = 15
       Caption = 'Jumlah'
     end
     object Button1: TButton
-      Left = 664
-      Top = 413
-      Width = 75
+      Left = 530
+      Top = 60
+      Width = 57
       Height = 25
       Caption = 'Simpan'
       TabOrder = 0
+      OnClick = Button1Click
     end
     object Edit1: TEdit
-      Left = 24
+      Left = 20
       Top = 61
       Width = 81
       Height = 23
       TabOrder = 1
     end
     object Edit2: TEdit
-      Left = 149
+      Left = 125
       Top = 61
       Width = 244
       Height = 23
       TabOrder = 2
     end
     object Edit3: TEdit
-      Left = 448
+      Left = 393
       Top = 61
       Width = 121
       Height = 23
@@ -120,6 +146,24 @@ object Form1: TForm1
       TitleFont.Name = 'Segoe UI'
       TitleFont.Style = []
     end
+    object Button2: TButton
+      Left = 602
+      Top = 60
+      Width = 57
+      Height = 25
+      Caption = 'Perbarui'
+      TabOrder = 5
+      OnClick = Button2Click
+    end
+    object Button3: TButton
+      Left = 672
+      Top = 60
+      Width = 57
+      Height = 25
+      Caption = 'Hapus'
+      TabOrder = 6
+      OnClick = Button3Click
+    end
   end
   object FDConnection1: TFDConnection
     Params.Strings = (
@@ -135,6 +179,9 @@ object Form1: TForm1
   object FDQuery1: TFDQuery
     Active = True
     Connection = FDConnection1
+    ResourceOptions.AssignedValues = [rvParamCreate, rvMacroCreate, rvMacroExpand]
+    ResourceOptions.MacroCreate = False
+    ResourceOptions.MacroExpand = False
     SQL.Strings = (
       'select * from tbbarang')
     Left = 128
@@ -165,5 +212,10 @@ object Form1: TForm1
     DataSet = FDQuery1
     Left = 200
     Top = 32
+  end
+  object Timer1: TTimer
+    OnTimer = Timer1Timer
+    Left = 656
+    Top = 24
   end
 end
