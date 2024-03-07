@@ -49,6 +49,7 @@ type
     procedure FormClose(Sender: TObject; var Action: TCloseAction);
     procedure Laporan2Click(Sender: TObject);
     procedure BarangKeluar1Click(Sender: TObject);
+    procedure DBGrid1CellClick(Column: TColumn);
 
   private
     { Private declarations }
@@ -157,6 +158,17 @@ begin
   FDQuery1.Delete;
   MessageDlg('Data Berhasil Dihapus', mtInformation, [mbOK], 0);
 end;
+
+procedure TFBarangmasuk.DBGrid1CellClick(Column: TColumn);
+begin
+if not FDQuery1.IsEmpty then
+begin
+  Edit1.Text := FDQuery1.FieldByName('kode_barang').AsString;
+  Edit2.Text := FDQuery1.FieldByName('nama_barang').AsString;
+  Edit3.Text := IntToStr(FDQuery1.FieldByName('jmlh_stock').AsInteger);
+end;
+end;
+
 procedure TFBarangmasuk.FormClose(Sender: TObject; var Action: TCloseAction);
 var
   myYes, myNo: TMsgDlgBtn;

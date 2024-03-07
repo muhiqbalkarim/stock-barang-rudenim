@@ -152,6 +152,7 @@ object FBarangmasuk: TFBarangmasuk
       TitleFont.Height = -12
       TitleFont.Name = 'Segoe UI'
       TitleFont.Style = []
+      OnCellClick = DBGrid1CellClick
     end
     object Button2: TButton
       Left = 602

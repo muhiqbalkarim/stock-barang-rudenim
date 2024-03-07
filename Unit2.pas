@@ -68,7 +68,10 @@ try
         MainForm.Free;
       end;
 
-      // Add further actions for a successful login if needed.
+      // Kondisi setelah muncul notifikasi login berhasil maka form login otomatis tertutup
+         Close;
+
+      // Kondisi Jika username dan password yang dimasukkan salah.
     end
     else
     begin
