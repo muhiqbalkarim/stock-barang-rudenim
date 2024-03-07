@@ -9,10 +9,11 @@ uses
   FireDAC.UI.Intf, FireDAC.Phys.Intf, FireDAC.Stan.Def, FireDAC.Stan.Pool,
   FireDAC.Stan.Async, FireDAC.Phys, FireDAC.VCLUI.Wait, FireDAC.Stan.Param,
   FireDAC.DatS, FireDAC.DApt.Intf, FireDAC.DApt, FireDAC.Comp.DataSet,
-  FireDAC.Comp.Client, FireDAC.Phys.MySQL, FireDAC.Phys.MySQLDef, Vcl.ExtCtrls;
+  FireDAC.Comp.Client, FireDAC.Phys.MySQL, FireDAC.Phys.MySQLDef, Vcl.ExtCtrls,
+  Vcl.Menus;
 
 type
-  TForm1 = class(TForm)
+  TFBarangmasuk = class(TForm)
     Label1: TLabel;
     Label2: TLabel;
     GroupBox1: TGroupBox;
@@ -35,11 +36,19 @@ type
     Timer1: TTimer;
     Label6: TLabel;
     Label7: TLabel;
+    MainMenu1: TMainMenu;
+    BarangMasuk1: TMenuItem;
+    BarangMasuk2: TMenuItem;
+    Laporan1: TMenuItem;
+    Laporan2: TMenuItem;
+    BarangKeluar1: TMenuItem;
     procedure Button1Click(Sender: TObject);
     procedure Button2Click(Sender: TObject);
     procedure Button3Click(Sender: TObject);
     procedure Timer1Timer(Sender: TObject);
     procedure FormClose(Sender: TObject; var Action: TCloseAction);
+    procedure Laporan2Click(Sender: TObject);
+    procedure BarangKeluar1Click(Sender: TObject);
 
   private
     { Private declarations }
@@ -48,13 +57,20 @@ type
   end;
 
 var
-  Form1: TForm1;
+  FBarangmasuk: TFBarangmasuk;
 
 implementation
 
 {$R *.dfm}
 
-procedure TForm1.Button1Click(Sender: TObject);
+uses Unit3, Unit4;
+
+procedure TFBarangmasuk.BarangKeluar1Click(Sender: TObject);
+begin
+  FLaporankeluar.Show;
+end;
+
+procedure TFBarangmasuk.Button1Click(Sender: TObject);
 var
 JumlahStock : Integer;
 begin
@@ -103,7 +119,7 @@ end;
 end;
 end;
 
-procedure TForm1.Button2Click(Sender: TObject);
+procedure TFBarangmasuk.Button2Click(Sender: TObject);
 begin
   if Edit1.Text = '' then
 begin
@@ -134,14 +150,14 @@ begin
   end;
 end;
 
-procedure TForm1.Button3Click(Sender: TObject);
+procedure TFBarangmasuk.Button3Click(Sender: TObject);
 begin
   if FDQuery1.RecordCount <=0 then
   MessageDlg('Pilih Data Terlebih Dahulu', mtWarning, [mbOK], 0) else
   FDQuery1.Delete;
   MessageDlg('Data Berhasil Dihapus', mtInformation, [mbOK], 0);
 end;
-procedure TForm1.FormClose(Sender: TObject; var Action: TCloseAction);
+procedure TFBarangmasuk.FormClose(Sender: TObject; var Action: TCloseAction);
 var
   myYes, myNo: TMsgDlgBtn;
   myButs: TMsgDlgButtons;
@@ -156,7 +172,12 @@ begin
     Action := caNone;
 end;
 
-procedure TForm1.Timer1Timer(Sender: TObject);
+procedure TFBarangmasuk.Laporan2Click(Sender: TObject);
+begin
+  FLaporanmasuk.Show;
+end;
+
+procedure TFBarangmasuk.Timer1Timer(Sender: TObject);
 begin
   Label6.Caption:= TimeToStr(now);
   Label7.Caption:= DateToStr(now);
@@ -164,7 +185,7 @@ end;
 
 end.
 
-procedure TForm1.Button2Click(Sender: TObject);
+procedure TFBarangmasuk.Button2Click(Sender: TObject);
 begin
   if Edit1.Text = '' then
 begin
@@ -195,7 +216,7 @@ begin
   end;
 end;
 
-procedure TForm1.Button3Click(Sender: TObject);
+procedure TFBarangmasuk.Button3Click(Sender: TObject);
 begin
   if FDQuery1.RecordCount <=0 then
   MessageDlg('Pilih Data Terlebih Dahulu', mtWarning, [mbOK], 0) else
@@ -203,7 +224,7 @@ begin
   MessageDlg('Data Berhasil Dihapus', mtInformation, [mbOK], 0);
 end;
 
-procedure TForm1.FormClose(Sender: TObject; var Action: TCloseAction);
+procedure TFBarangmasuk.FormClose(Sender: TObject; var Action: TCloseAction);
 var
   myYes, myNo: TMsgDlgBtn;
   myButs: TMsgDlgButtons;
@@ -219,7 +240,7 @@ begin
 end;
 end.
 
-procedure TForm1.Timer1Timer(Sender: TObject);
+procedure TFBarangmasuk.Timer1Timer(Sender: TObject);
 begin
   Label6.Caption:= TimeToStr(now);
   Label7.Caption:= DateToStr(now);

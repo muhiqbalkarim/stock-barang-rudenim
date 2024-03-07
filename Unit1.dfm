@@ -1,24 +1,25 @@
-object Form1: TForm1
+object FBarangmasuk: TFBarangmasuk
   Left = 270
   Top = 27
-  Caption = 'Stock Barang'
-  ClientHeight = 624
-  ClientWidth = 847
+  Caption = 'Stock Barang Masuk'
+  ClientHeight = 635
+  ClientWidth = 832
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
   Font.Height = -12
   Font.Name = 'Segoe UI'
   Font.Style = []
-  Position = poDesigned
+  Menu = MainMenu1
+  Position = poDesktopCenter
   OnClose = FormClose
   DesignSize = (
-    847
-    624)
+    832
+    635)
   TextHeight = 15
   object Label1: TLabel
-    Left = 263
-    Top = 29
+    Left = 255
+    Top = 30
     Width = 325
     Height = 54
     Anchors = []
@@ -33,8 +34,8 @@ object Form1: TForm1
     ExplicitTop = 33
   end
   object Label2: TLabel
-    Left = 279
-    Top = 79
+    Left = 271
+    Top = 80
     Width = 291
     Height = 28
     Anchors = []
@@ -49,8 +50,8 @@ object Form1: TForm1
     ExplicitTop = 85
   end
   object Label6: TLabel
-    Left = 64
-    Top = 592
+    Left = 63
+    Top = 603
     Width = 5
     Height = 25
     Anchors = []
@@ -60,10 +61,12 @@ object Form1: TForm1
     Font.Name = 'Segoe UI'
     Font.Style = [fsBold]
     ParentFont = False
+    ExplicitLeft = 64
+    ExplicitTop = 592
   end
   object Label7: TLabel
-    Left = 702
-    Top = 589
+    Left = 690
+    Top = 600
     Width = 5
     Height = 25
     Anchors = []
@@ -73,15 +76,19 @@ object Form1: TForm1
     Font.Name = 'Segoe UI'
     Font.Style = [fsBold]
     ParentFont = False
+    ExplicitLeft = 702
+    ExplicitTop = 589
   end
   object GroupBox1: TGroupBox
-    Left = 40
-    Top = 172
+    Left = 32
+    Top = 179
     Width = 777
     Height = 423
     Anchors = []
     Caption = 'Barang Masuk'
     TabOrder = 0
+    ExplicitLeft = 27
+    ExplicitTop = 168
     object Label3: TLabel
       Left = 20
       Top = 40
@@ -217,5 +224,26 @@ object Form1: TForm1
     OnTimer = Timer1Timer
     Left = 656
     Top = 24
+  end
+  object MainMenu1: TMainMenu
+    Left = 720
+    Top = 40
+    object BarangMasuk1: TMenuItem
+      Caption = 'Barang Masuk'
+    end
+    object BarangMasuk2: TMenuItem
+      Caption = 'Barang Keluar'
+    end
+    object Laporan1: TMenuItem
+      Caption = 'Laporan'
+      object Laporan2: TMenuItem
+        Caption = 'Barang Masuk'
+        OnClick = Laporan2Click
+      end
+      object BarangKeluar1: TMenuItem
+        Caption = 'Barang Keluar'
+        OnClick = BarangKeluar1Click
+      end
+    end
   end
 end
