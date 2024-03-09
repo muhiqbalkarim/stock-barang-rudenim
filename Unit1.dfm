@@ -13,12 +13,13 @@ object FBarangmasuk: TFBarangmasuk
   Menu = MainMenu1
   Position = poDesktopCenter
   OnClose = FormClose
+  OnCreate = FormCreate
   DesignSize = (
     832
     635)
   TextHeight = 15
   object Label1: TLabel
-    Left = 255
+    Left = 250
     Top = 30
     Width = 325
     Height = 54
@@ -34,7 +35,7 @@ object FBarangmasuk: TFBarangmasuk
     ExplicitTop = 33
   end
   object Label2: TLabel
-    Left = 271
+    Left = 266
     Top = 80
     Width = 291
     Height = 28
@@ -50,7 +51,7 @@ object FBarangmasuk: TFBarangmasuk
     ExplicitTop = 85
   end
   object Label6: TLabel
-    Left = 63
+    Left = 62
     Top = 603
     Width = 5
     Height = 25
@@ -65,7 +66,7 @@ object FBarangmasuk: TFBarangmasuk
     ExplicitTop = 592
   end
   object Label7: TLabel
-    Left = 690
+    Left = 682
     Top = 600
     Width = 5
     Height = 25
@@ -80,14 +81,14 @@ object FBarangmasuk: TFBarangmasuk
     ExplicitTop = 589
   end
   object GroupBox1: TGroupBox
-    Left = 32
+    Left = 27
     Top = 179
     Width = 777
     Height = 423
     Anchors = []
     Caption = 'Barang Masuk'
     TabOrder = 0
-    ExplicitLeft = 27
+    ExplicitLeft = 22
     ExplicitTop = 168
     object Label3: TLabel
       Left = 20

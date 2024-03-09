@@ -12,8 +12,8 @@ uses
 begin
   Application.Initialize;
   Application.MainFormOnTaskbar := True;
-  Application.CreateForm(TFLogin, FLogin);
   Application.CreateForm(TFBarangmasuk, FBarangmasuk);
+  Application.CreateForm(TFLogin, FLogin);
   Application.CreateForm(TFLaporanmasuk, FLaporanmasuk);
   Application.CreateForm(TFLaporankeluar, FLaporankeluar);
   Application.Run;

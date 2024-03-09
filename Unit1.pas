@@ -50,9 +50,11 @@ type
     procedure Laporan2Click(Sender: TObject);
     procedure BarangKeluar1Click(Sender: TObject);
     procedure DBGrid1CellClick(Column: TColumn);
+    procedure FormCreate(Sender: TObject);
 
   private
     { Private declarations }
+    AddAttemptCounter: Integer;
   public
     { Public declarations }
   end;
@@ -97,17 +99,36 @@ begin
     Edit3.SetFocus;
   end else
 begin
-  try
+try
+if FDQuery1.Locate('kode_barang', Edit1.Text, []) then
+begin
+  Inc(AddAttemptCounter);
+  if AddAttemptCounter >=3 then
+  begin
+    MessageDlg('Jika Ingin Memperbarui Data, Silahkan Klik Tombol Perbarui', mtWarning, [mbOK], 0);
+    AddAttemptCounter:=0;
+    Exit;
+  end else
+  begin
+    MessageDlg('Kode Barang Sudah Ada', mtError, [mbOK], 0);
+    FDQuery1.Cancel;
+    Edit1.SetFocus;
+    Exit;
+  end;
+  end;
     FDQuery1.Append;
     FDQuery1.FieldByName('kode_barang') .AsString:=Edit1.Text;
     FDQuery1.FieldByName('nama_barang') .AsString:= Edit2.Text;
     FDQuery1.FieldByName('jmlh_stock') .AsInteger := JumlahStock;
     FDQuery1.Post;
+
     MessageDlg('Data Berhasil Disimpan', mtInformation, [mbOK], 0);
     Edit1.Text:='';
     Edit2.Text:='';
     Edit3.Text:='';
     Edit1.SetFocus;
+
+    AddAttemptCounter := 0;
   Except
   on E: EDatabaseError do
   begin
@@ -121,6 +142,8 @@ end;
 end;
 
 procedure TFBarangmasuk.Button2Click(Sender: TObject);
+var
+JumlahStock : Integer;
 begin
   if Edit1.Text = '' then
 begin
@@ -135,6 +158,11 @@ end else
 if Edit3.Text = '' then
 begin
   MessageDlg('Jumlah Barang Tidak Boleh Kosong', mtInformation, [mbOK], 0);
+  Edit3.SetFocus;
+end else
+if not TryStrToInt(Edit3.Text, JumlahStock) then
+begin
+  MessageDlg('Silahkan Memasukkan Angka!', mtWarning, [mbOK], 0);
   Edit3.SetFocus;
 end else
 begin
@@ -152,11 +180,23 @@ begin
 end;
 
 procedure TFBarangmasuk.Button3Click(Sender: TObject);
+var
+  Confirmation : Boolean;
 begin
   if FDQuery1.RecordCount <=0 then
   MessageDlg('Pilih Data Terlebih Dahulu', mtWarning, [mbOK], 0) else
+begin
+  Confirmation := MessageDlg('Apakah Anda Yakin Ingin Menghapus data ?', mtConfirmation, mbYesNo, 0) = mrYes;
+  if Confirmation then
+begin
   FDQuery1.Delete;
   MessageDlg('Data Berhasil Dihapus', mtInformation, [mbOK], 0);
+  Edit1.Text:='';
+  Edit2.Text:='';
+  Edit3.Text:='';
+  Edit1.SetFocus;
+end;
+end;
 end;
 
 procedure TFBarangmasuk.DBGrid1CellClick(Column: TColumn);
@@ -184,6 +224,11 @@ begin
     Action := caNone;
 end;
 
+procedure TFBarangmasuk.FormCreate(Sender: TObject);
+begin
+AddAttemptCounter := 0;
+end;
+
 procedure TFBarangmasuk.Laporan2Click(Sender: TObject);
 begin
   FLaporanmasuk.Show;
@@ -195,66 +240,4 @@ begin
   Label7.Caption:= DateToStr(now);
 end;
 
-end.
-
-procedure TFBarangmasuk.Button2Click(Sender: TObject);
-begin
-  if Edit1.Text = '' then
-begin
-  MessageDlg('Kode Barang Tidak Boleh Kosong', mtInformation, [mbOK], 0);
-  Edit1.SetFocus;
-end else
-if Edit2.Text = '' then
-begin
-  MessageDlg('Nama Barang Tidak Boleh Kosong', mtInformation, [mbOK], 0);
-  Edit2.SetFocus;
-end else
-if Edit3.Text = '' then
-begin
-  MessageDlg('Jumlah Barang Tidak Boleh Kosong', mtInformation, [mbOK], 0);
-  Edit3.SetFocus;
-end else
-begin
-    FDQuery1.Edit;
-    FDQuery1.FieldByName('kode_barang') .AsString:=Edit1.Text;
-    FDQuery1.FieldByName('nama_barang') .AsString:= Edit2.Text;
-    FDQuery1.FieldByName('jmlh_stock') .AsInteger := StrToInt(Edit3.Text);
-    FDQuery1.Post;
-    MessageDlg('Data Berhasil Diperbarui', mtInformation, [mbOK], 0);
-    Edit1.Text:='';
-    Edit2.Text:='';
-    Edit3.Text:='';
-    Edit1.SetFocus;
-  end;
-end;
-
-procedure TFBarangmasuk.Button3Click(Sender: TObject);
-begin
-  if FDQuery1.RecordCount <=0 then
-  MessageDlg('Pilih Data Terlebih Dahulu', mtWarning, [mbOK], 0) else
-  FDQuery1.Delete;
-  MessageDlg('Data Berhasil Dihapus', mtInformation, [mbOK], 0);
-end;
-
-procedure TFBarangmasuk.FormClose(Sender: TObject; var Action: TCloseAction);
-var
-  myYes, myNo: TMsgDlgBtn;
-  myButs: TMsgDlgButtons;
-begin
-  myYes:= mbOK;
-  myNo:= mbCancel;
-  myButs:= [myYes, myNo];
-  if MessageDlg('Anda Yakin Ingin Keluar ?', TMsgDlgType.mtWarning,
-    myButs, 0) = mrOk then
-    Action := caFree
-  else
-    Action := caNone;
-end;
-end.
-
-procedure TFBarangmasuk.Timer1Timer(Sender: TObject);
-begin
-  Label6.Caption:= TimeToStr(now);
-  Label7.Caption:= DateToStr(now);
-end;
 end.
