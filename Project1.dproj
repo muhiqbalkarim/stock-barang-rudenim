@@ -86,6 +86,7 @@
         <AppDPIAwarenessMode>PerMonitorV2</AppDPIAwarenessMode>
         <VerInfo_IncludeVerInfo>true</VerInfo_IncludeVerInfo>
         <VerInfo_Locale>1033</VerInfo_Locale>
+        <Icon_MainIcon>Project1_Icon.ico</Icon_MainIcon>
     </PropertyGroup>
     <PropertyGroup Condition="'$(Cfg_2)'!=''">
         <DCC_LocalDebugSymbols>false</DCC_LocalDebugSymbols>
@@ -114,6 +115,10 @@
         </DCCReference>
         <DCCReference Include="Unit4.pas">
             <Form>FLaporankeluar</Form>
+            <FormType>dfm</FormType>
+        </DCCReference>
+        <DCCReference Include="Unit5.pas">
+            <Form>FBarangkeluar</Form>
             <FormType>dfm</FormType>
         </DCCReference>
         <BuildConfiguration Include="Base">

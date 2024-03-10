@@ -51,6 +51,7 @@ type
     procedure BarangKeluar1Click(Sender: TObject);
     procedure DBGrid1CellClick(Column: TColumn);
     procedure FormCreate(Sender: TObject);
+    procedure BarangMasuk2Click(Sender: TObject);
 
   private
     { Private declarations }
@@ -66,11 +67,17 @@ implementation
 
 {$R *.dfm}
 
-uses Unit3, Unit4;
+uses Unit3, Unit4, Unit5;
 
 procedure TFBarangmasuk.BarangKeluar1Click(Sender: TObject);
 begin
   FLaporankeluar.Show;
+end;
+
+procedure TFBarangmasuk.BarangMasuk2Click(Sender: TObject);
+begin
+  FBarangkeluar.Show;
+  Hide;
 end;
 
 procedure TFBarangmasuk.Button1Click(Sender: TObject);

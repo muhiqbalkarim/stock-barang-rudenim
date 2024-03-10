@@ -88,8 +88,8 @@ object FBarangmasuk: TFBarangmasuk
     Anchors = []
     Caption = 'Barang Masuk'
     TabOrder = 0
-    ExplicitLeft = 22
-    ExplicitTop = 168
+    ExplicitLeft = 25
+    ExplicitTop = 178
     object Label3: TLabel
       Left = 20
       Top = 40
@@ -235,6 +235,7 @@ object FBarangmasuk: TFBarangmasuk
     end
     object BarangMasuk2: TMenuItem
       Caption = 'Barang Keluar'
+      OnClick = BarangMasuk2Click
     end
     object Laporan1: TMenuItem
       Caption = 'Laporan'
