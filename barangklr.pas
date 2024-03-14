@@ -79,15 +79,12 @@ begin
 
   // Insert data into the database table
   try
-    FDQuery1.SQL.Text := 'INSERT INTO tbbarangklr (nama_barang, kd_brg, penerima, jumlah_keluar) VALUES (:nama_barang, :kd_brg, :penerima, :jumlah_keluar)';
-    FDQuery1.ParamByName('nama_barang').AsString := NamaBarang;
-    FDQuery1.ParamByName('kd_brg').AsString := KodeBarang;
-    FDQuery1.ParamByName('penerima').AsString := Penerima;
-    FDQuery1.ParamByName('jumlah_keluar').AsInteger := JumlahKeluar;
-    FDQuery1.ExecSQL;
+    FDConnection1.ExecSQL('INSERT INTO tbbarangklr (nama_barang, kd_brg, penerima, jumlah_keluar) VALUES (:nama_barang, :kd_brg, :penerima, :jumlah_keluar)',
+    [NamaBarang, KodeBarang, Penerima, JumlahKeluar]);
+
 
     // Decrease stock in the tbbarang table
-    TStockUtils.DecreaseStock(FDQuery1, FDConnection1, KodeBarang, JumlahKeluar);
+    //TStockUtils.DecreaseStock(FDQuery1, FDConnection1, KodeBarang, JumlahKeluar);
 
     // Commit the transaction
     FDConnection1.Commit;
@@ -95,11 +92,22 @@ begin
     // Show a message indicating success
     MessageDlg('Data berhasil dimasukkan.', mtInformation, [mbOK], 0);
 
+     // Refresh the dataset bound to DBGrid1
+    FDQuery1.Close;
+    FDQuery1.Open;
+
     // Clear input fields
     Edit1.Text := '';
     ComboBox1.ItemIndex := -1;
     Edit3.Text := '';
     Edit4.Text := '';
+
+    // Refresh the DBGrid in FStockbarang
+    FStockbarang.FDQuery1.Close;
+    FStockbarang.FDQuery1.Open;
+
+    // Populate the ComboBox again
+    PopulateComboBox;
 
     // Set focus back to ComboBox1
     ComboBox1.SetFocus;
