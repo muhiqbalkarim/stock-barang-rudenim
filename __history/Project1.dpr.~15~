@@ -1,0 +1,24 @@
+program Project1;
+
+uses
+  Vcl.Forms,
+  stockbarang in 'stockbarang.pas' {FStockbarang},
+  login in 'login.pas' {FLogin},
+  lpbarangmsk in 'lpbarangmsk.pas' {FLaporanmasuk},
+  lpbarangklr in 'lpbarangklr.pas' {FLaporankeluar},
+  barangklr in 'barangklr.pas' {FBarangkeluar},
+  barangmsk in 'barangmsk.pas' {FBarangmasuk};
+
+{$R *.res}
+
+begin
+  Application.Initialize;
+  Application.MainFormOnTaskbar := True;
+  Application.CreateForm(TFLogin, FLogin);
+  Application.CreateForm(TFStockbarang, FStockbarang);
+  Application.CreateForm(TFBarangkeluar, FBarangkeluar);
+  Application.CreateForm(TFLaporanmasuk, FLaporanmasuk);
+  Application.CreateForm(TFLaporankeluar, FLaporankeluar);
+  Application.CreateForm(TFBarangmasuk, FBarangmasuk);
+  Application.Run;
+end.

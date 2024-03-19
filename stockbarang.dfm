@@ -2,7 +2,7 @@ object FStockbarang: TFStockbarang
   Left = 270
   Top = 27
   Caption = 'Stock Barang'
-  ClientHeight = 598
+  ClientHeight = 657
   ClientWidth = 808
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
@@ -16,11 +16,11 @@ object FStockbarang: TFStockbarang
   OnCreate = FormCreate
   DesignSize = (
     808
-    598)
+    657)
   TextHeight = 15
   object Label1: TLabel
-    Left = 236
-    Top = 26
+    Left = 231
+    Top = 31
     Width = 325
     Height = 54
     Anchors = []
@@ -35,8 +35,8 @@ object FStockbarang: TFStockbarang
     ExplicitTop = 33
   end
   object Label2: TLabel
-    Left = 252
-    Top = 74
+    Left = 247
+    Top = 82
     Width = 291
     Height = 28
     Anchors = []
@@ -52,7 +52,7 @@ object FStockbarang: TFStockbarang
   end
   object Label6: TLabel
     Left = 43
-    Top = 567
+    Top = 625
     Width = 5
     Height = 25
     Anchors = []
@@ -62,12 +62,10 @@ object FStockbarang: TFStockbarang
     Font.Name = 'Segoe UI'
     Font.Style = [fsBold]
     ParentFont = False
-    ExplicitLeft = 45
-    ExplicitTop = 602
   end
   object Label7: TLabel
-    Left = 670
-    Top = 567
+    Left = 651
+    Top = 625
     Width = 5
     Height = 25
     Anchors = []
@@ -77,17 +75,18 @@ object FStockbarang: TFStockbarang
     Font.Name = 'Segoe UI'
     Font.Style = [fsBold]
     ParentFont = False
-    ExplicitLeft = 689
-    ExplicitTop = 602
+    ExplicitLeft = 659
   end
   object GroupBox1: TGroupBox
-    Left = 13
-    Top = 156
+    Left = 8
+    Top = 192
     Width = 777
-    Height = 423
+    Height = 427
     Anchors = []
     Caption = 'Stock Barang'
     TabOrder = 0
+    ExplicitLeft = 3
+    ExplicitTop = 181
     object Label3: TLabel
       Left = 20
       Top = 40
@@ -143,7 +142,7 @@ object FStockbarang: TFStockbarang
       Left = 16
       Top = 104
       Width = 745
-      Height = 303
+      Height = 313
       DataSource = DataSource1
       Font.Charset = DEFAULT_CHARSET
       Font.Color = clWindowText
@@ -200,7 +199,7 @@ object FStockbarang: TFStockbarang
     Left = 128
     Top = 32
     object FDQuery1kd_brg: TStringField
-      Alignment = taCenter
+      Alignment = taRightJustify
       DisplayLabel = 'Kode Barang'
       DisplayWidth = 13
       FieldName = 'kd_brg'

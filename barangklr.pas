@@ -21,7 +21,6 @@ type
     Edit1: TEdit;
     Edit3: TEdit;
     DBGrid1: TDBGrid;
-    Button2: TButton;
     Label1: TLabel;
     Label2: TLabel;
     Label6: TLabel;
@@ -64,6 +63,7 @@ procedure TFBarangkeluar.Button1Click(Sender: TObject);
 var
   NamaBarang, KodeBarang, Penerima: string;
   JumlahKeluar, StockTersedia: Integer;
+  InputText : string;
 begin
   // Validate input
   if (ComboBox1.ItemIndex = -1) or (Edit3.Text = '') or (Edit4.Text = '') then
@@ -76,7 +76,15 @@ begin
   NamaBarang := ComboBox1.Text; // Get the selected item's name
   KodeBarang := Edit1.Text;
   Penerima := Edit4.Text; // Assuming Edit4 contains the name of the recipient
-  JumlahKeluar := StrToInt(Edit3.Text);
+  InputText := Trim(Edit3.Text);
+
+  // Validation if user try input any type date beside integer
+  if not TryStrToInt(InputText, JumlahKeluar) then
+  begin
+    MessageDlg('Silahkan memasukkan angka yang benar.', mtWarning, [mbOK], 0);
+    Edit3.SetFocus;
+    Exit;
+  end;
 
   // Check if the requested quantity exceeds the available stock
   StockTersedia := FStockbarang.JumlahStock(KodeBarang);

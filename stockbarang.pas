@@ -95,23 +95,23 @@ JumlahStock : Integer;
 begin
   if Edit1.Text = '' then
 begin
-  MessageDlg('Kode Barang Tidak Boleh Kosong', mtInformation, [mbOK], 0);
+  MessageDlg('Kode Barang tidak boleh kosong', mtInformation, [mbOK], 0);
   Edit1.SetFocus;
 end else
 if Edit2.Text = '' then
 begin
-  MessageDlg('Nama Barang Tidak Boleh Kosong', mtInformation, [mbOK], 0);
+  MessageDlg('Nama Barang tidak boleh kosong', mtInformation, [mbOK], 0);
   Edit2.SetFocus;
 end else
 if Edit3.Text = '' then
 begin
-  MessageDlg('Jumlah Barang Tidak Boleh Kosong', mtInformation, [mbOK], 0);
+  MessageDlg('Jumlah Barang tidak boleh kosong', mtInformation, [mbOK], 0);
   Edit3.SetFocus;
 end else
 begin
   if not TryStrToInt(Edit3.Text, JumlahStock) then
   begin
-    MessageDlg('Jumlah Barang Harus Dalam Bentuk Angka', mtWarning, [mbOK], 0);
+    MessageDlg('Jumlah barang harus dalam bentuk angka saja', mtWarning, [mbOK], 0);
     Edit3.SetFocus;
   end else
 begin
@@ -121,12 +121,13 @@ begin
   Inc(AddAttemptCounter);
   if AddAttemptCounter >=3 then
   begin
-    MessageDlg('Jika Ingin Memperbarui Data, Silahkan Klik Tombol Perbarui', mtWarning, [mbOK], 0);
+    MessageDlg('Jika ingin memperbarui data, Silahkan klik tombol perbarui', mtWarning, [mbOK], 0);
     AddAttemptCounter:=0;
+    Button2.SetFocus;
     Exit;
   end else
   begin
-    MessageDlg('Kode Barang Sudah Ada', mtError, [mbOK], 0);
+    MessageDlg('Kode Barang sudah ada!', mtError, [mbOK], 0);
     FDQuery1.Cancel;
     Edit1.SetFocus;
     Exit;
@@ -138,7 +139,7 @@ begin
     FDQuery1.FieldByName('jmlh_stock') .AsInteger := JumlahStock;
     FDQuery1.Post;
 
-    MessageDlg('Data Berhasil Disimpan', mtInformation, [mbOK], 0);
+    MessageDlg('Data berhasil disimpan', mtInformation, [mbOK], 0);
     Edit1.Text:='';
     Edit2.Text:='';
     Edit3.Text:='';
@@ -148,7 +149,7 @@ begin
   Except
   on E: EDatabaseError do
   begin
-    MessageDlg('Kode Barang Sudah Ada', mtError, [mbOK], 0);
+    MessageDlg('Kode Barang sudah ada!', mtError, [mbOK], 0);
     FDQuery1.Cancel;
     Edit1.SetFocus;
     end;
@@ -163,22 +164,22 @@ JumlahStock : Integer;
 begin
   if Edit1.Text = '' then
 begin
-  MessageDlg('Kode Barang Tidak Boleh Kosong', mtInformation, [mbOK], 0);
+  MessageDlg('Kode Barang tidak boleh kosong', mtInformation, [mbOK], 0);
   Edit1.SetFocus;
 end else
 if Edit2.Text = '' then
 begin
-  MessageDlg('Nama Barang Tidak Boleh Kosong', mtInformation, [mbOK], 0);
+  MessageDlg('Nama Barang tidak boleh kosong', mtInformation, [mbOK], 0);
   Edit2.SetFocus;
 end else
 if Edit3.Text = '' then
 begin
-  MessageDlg('Jumlah Barang Tidak Boleh Kosong', mtInformation, [mbOK], 0);
+  MessageDlg('Jumlah Barang tidak boleh kosong', mtInformation, [mbOK], 0);
   Edit3.SetFocus;
 end else
 if not TryStrToInt(Edit3.Text, JumlahStock) then
 begin
-  MessageDlg('Silahkan Memasukkan Angka!', mtWarning, [mbOK], 0);
+  MessageDlg('Silahkan memasukkan angka yang benar!', mtWarning, [mbOK], 0);
   Edit3.SetFocus;
 end else
 begin
@@ -187,7 +188,7 @@ begin
     FDQuery1.FieldByName('nama_barang') .AsString:= Edit2.Text;
     FDQuery1.FieldByName('jmlh_stock') .AsInteger := StrToInt(Edit3.Text);
     FDQuery1.Post;
-    MessageDlg('Data Berhasil Diperbarui', mtInformation, [mbOK], 0);
+    MessageDlg('Data berhasil diperbarui', mtInformation, [mbOK], 0);
     Edit1.Text:='';
     Edit2.Text:='';
     Edit3.Text:='';
@@ -200,13 +201,13 @@ var
   Confirmation : Boolean;
 begin
   if FDQuery1.RecordCount <=0 then
-  MessageDlg('Pilih Data Terlebih Dahulu', mtWarning, [mbOK], 0) else
+  MessageDlg('Pilih data terlebih dahulu!', mtWarning, [mbOK], 0) else
 begin
-  Confirmation := MessageDlg('Apakah Anda Yakin Ingin Menghapus data ?', mtConfirmation, mbYesNo, 0) = mrYes;
+  Confirmation := MessageDlg('Apakah anda yakin ingin menghapus data?', mtConfirmation, mbYesNo, 0) = mrYes;
   if Confirmation then
 begin
   FDQuery1.Delete;
-  MessageDlg('Data Berhasil Dihapus', mtInformation, [mbOK], 0);
+  MessageDlg('Data berhasil dihapus', mtInformation, [mbOK], 0);
   Edit1.Text:='';
   Edit2.Text:='';
   Edit3.Text:='';
@@ -233,7 +234,7 @@ begin
   myYes:= mbOK;
   myNo:= mbCancel;
   myButs:= [myYes, myNo];
-  if MessageDlg('Anda Yakin Ingin Keluar ?', mtWarning, myButs, 0) = mrOk then
+  if MessageDlg('Anda yakin ingin keluar ?', mtWarning, myButs, 0) = mrOk then
 begin
   if Assigned(FBarangkeluar) then
     FBarangkeluar.Hide;

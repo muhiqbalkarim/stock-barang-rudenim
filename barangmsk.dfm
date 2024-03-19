@@ -1,7 +1,7 @@
 object FBarangmasuk: TFBarangmasuk
   Left = 0
   Top = 0
-  Caption = 'Stock Barang Masuk'
+  Caption = 'Barang Masuk'
   ClientHeight = 671
   ClientWidth = 832
   Color = clBtnFace
@@ -17,7 +17,7 @@ object FBarangmasuk: TFBarangmasuk
     671)
   TextHeight = 15
   object Label1: TLabel
-    Left = 242
+    Left = 237
     Top = 31
     Width = 325
     Height = 54
@@ -33,7 +33,7 @@ object FBarangmasuk: TFBarangmasuk
     ExplicitTop = 33
   end
   object Label2: TLabel
-    Left = 258
+    Left = 253
     Top = 82
     Width = 291
     Height = 28
@@ -50,7 +50,7 @@ object FBarangmasuk: TFBarangmasuk
   end
   object Label6: TLabel
     Left = 42
-    Top = 640
+    Top = 641
     Width = 34
     Height = 25
     Anchors = []
@@ -62,10 +62,11 @@ object FBarangmasuk: TFBarangmasuk
     Font.Style = [fsBold]
     ParentFont = False
     ExplicitLeft = 45
+    ExplicitTop = 640
   end
   object Label7: TLabel
-    Left = 674
-    Top = 640
+    Left = 665
+    Top = 641
     Width = 67
     Height = 25
     Anchors = []
@@ -77,17 +78,18 @@ object FBarangmasuk: TFBarangmasuk
     Font.Style = [fsBold]
     ParentFont = False
     ExplicitLeft = 686
+    ExplicitTop = 640
   end
   object GroupBox1: TGroupBox
-    Left = 19
+    Left = 14
     Top = 188
     Width = 777
     Height = 446
     Anchors = []
     Caption = 'Barang Masuk'
     TabOrder = 0
-    ExplicitLeft = 17
-    ExplicitTop = 187
+    ExplicitLeft = 9
+    ExplicitTop = 177
     object Label3: TLabel
       Left = 20
       Top = 40
