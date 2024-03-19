@@ -59,6 +59,7 @@ type
   public
     { Public declarations }
     function GetAvailableStock: TStringList;
+    function JumlahStock(const KodeBarang: string): Integer;
     function BuildNameToCodeMapping: TStringList;
   end;
 
@@ -256,6 +257,25 @@ procedure TFStockbarang.Timer1Timer(Sender: TObject);
 begin
   Label6.Caption:= TimeToStr(now);
   Label7.Caption:= DateToStr(now);
+end;
+
+function TFStockbarang.JumlahStock(const KodeBarang: string): Integer;
+var
+  Query: TFDQuery;
+begin
+  Query := TFDQuery.Create(nil);
+  try
+    Query.Connection := FDConnection1;
+    Query.SQL.Text := 'SELECT jmlh_stock FROM stock_barang WHERE kd_brg = :KodeBarang';
+    Query.ParamByName('KodeBarang').AsString := KodeBarang;
+    Query.Open;
+    if not Query.IsEmpty then
+      Result := Query.FieldByName('jmlh_stock').AsInteger
+    else
+      Result := 0; // or any default value indicating stock not found
+  finally
+    Query.Free;
+  end;
 end;
 
 function TFStockbarang.GetAvailableStock: TStringList;

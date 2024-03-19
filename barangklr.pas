@@ -9,7 +9,7 @@ uses
   FireDAC.Stan.Error, FireDAC.UI.Intf, FireDAC.Phys.Intf, FireDAC.Stan.Def,
   FireDAC.Stan.Pool, FireDAC.Stan.Async, FireDAC.Phys, FireDAC.Phys.MySQL,
   FireDAC.Phys.MySQLDef, FireDAC.VCLUI.Wait, FireDAC.Stan.Param, FireDAC.DatS,
-  FireDAC.DApt.Intf, FireDAC.DApt, FireDAC.Comp.DataSet, FireDAC.Comp.Client, StockUtils;
+  FireDAC.DApt.Intf, FireDAC.DApt, FireDAC.Comp.DataSet, FireDAC.Comp.Client;
 
 type
   TFBarangkeluar = class(TForm)
@@ -46,6 +46,7 @@ type
   private
     { Private declarations }
     procedure PopulateComboBox;
+    function JumlahStockFromDatabase(const KodeBarang: string): Integer;
   public
     { Public declarations }
   end;
@@ -57,12 +58,12 @@ implementation
 
 {$R *.dfm}
 
-uses stockbarang, barangmsk;
+uses stockbarang;
 
 procedure TFBarangkeluar.Button1Click(Sender: TObject);
 var
   NamaBarang, KodeBarang, Penerima: string;
-  JumlahKeluar: Integer;
+  JumlahKeluar, StockTersedia: Integer;
 begin
   // Validate input
   if (ComboBox1.ItemIndex = -1) or (Edit3.Text = '') or (Edit4.Text = '') then
@@ -77,10 +78,19 @@ begin
   Penerima := Edit4.Text; // Assuming Edit4 contains the name of the recipient
   JumlahKeluar := StrToInt(Edit3.Text);
 
+  // Check if the requested quantity exceeds the available stock
+  StockTersedia := FStockbarang.JumlahStock(KodeBarang);
+  if JumlahKeluar > StockTersedia then
+  begin
+    MessageDlg('Jumlah yang diminta melebihi stok yang tersedia.', mtWarning, [mbOK], 0);
+    Exit;
+  end;
+
   // Insert data into the database table
   try
-    FDConnection1.ExecSQL('INSERT INTO tbbarangklr (nama_barang, kd_brg, penerima, jumlah_keluar) VALUES (:nama_barang, :kd_brg, :penerima, :jumlah_keluar)',
-    [NamaBarang, KodeBarang, Penerima, JumlahKeluar]);
+    FDConnection1.ExecSQL('INSERT INTO tbbarangklr (nama_barang, kd_brg, penerima, jumlah_keluar, tanggal_transaksi) ' +
+                          'VALUES (:nama_barang, :kd_brg, :penerima, :jumlah_keluar, :tanggal_transaksi)',
+    [NamaBarang, KodeBarang, Penerima, JumlahKeluar, Now]);
 
 
     // Decrease stock in the tbbarang table
@@ -182,6 +192,25 @@ procedure TFBarangkeluar.Timer1Timer(Sender: TObject);
 begin
   Label6.Caption:= TimeToStr(now);
   Label7.Caption:= DateToStr(now);
+end;
+
+function TFBarangkeluar.JumlahStockFromDatabase(const KodeBarang: string): Integer;
+var
+  Query: TFDQuery;
+begin
+  Query := TFDQuery.Create(nil);
+  try
+    Query.Connection := FDConnection1;
+    Query.SQL.Text := 'SELECT jmlh_stock FROM stock_barang WHERE kd_brg = :KodeBarang';
+    Query.ParamByName('KodeBarang').AsString := KodeBarang;
+    Query.Open;
+    if not Query.IsEmpty then
+      Result := Query.FieldByName('jmlh_stock').AsInteger
+    else
+      Result := 0; // or any default value indicating stock not found
+  finally
+    Query.Free;
+  end;
 end;
 
 end.

@@ -2,8 +2,8 @@ object FBarangkeluar: TFBarangkeluar
   Left = 0
   Top = 0
   Caption = 'Stock Barang Keluar'
-  ClientHeight = 671
-  ClientWidth = 832
+  ClientHeight = 653
+  ClientWidth = 822
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -15,12 +15,12 @@ object FBarangkeluar: TFBarangkeluar
   OnClose = FormClose
   OnShow = FormShow
   DesignSize = (
-    832
-    671)
+    822
+    653)
   TextHeight = 15
   object Label1: TLabel
-    Left = 242
-    Top = 31
+    Left = 228
+    Top = 29
     Width = 325
     Height = 54
     Anchors = []
@@ -35,8 +35,8 @@ object FBarangkeluar: TFBarangkeluar
     ExplicitTop = 33
   end
   object Label2: TLabel
-    Left = 258
-    Top = 82
+    Left = 244
+    Top = 79
     Width = 291
     Height = 28
     Anchors = []
@@ -51,8 +51,8 @@ object FBarangkeluar: TFBarangkeluar
     ExplicitTop = 85
   end
   object Label6: TLabel
-    Left = 42
-    Top = 640
+    Left = 41
+    Top = 623
     Width = 34
     Height = 25
     Anchors = []
@@ -64,10 +64,11 @@ object FBarangkeluar: TFBarangkeluar
     Font.Style = [fsBold]
     ParentFont = False
     ExplicitLeft = 45
+    ExplicitTop = 640
   end
   object Label7: TLabel
-    Left = 674
-    Top = 640
+    Left = 648
+    Top = 623
     Width = 67
     Height = 25
     Anchors = []
@@ -79,17 +80,17 @@ object FBarangkeluar: TFBarangkeluar
     Font.Style = [fsBold]
     ParentFont = False
     ExplicitLeft = 686
+    ExplicitTop = 640
   end
   object GroupBox1: TGroupBox
-    Left = 19
-    Top = 188
+    Left = 4
+    Top = 177
     Width = 777
     Height = 446
     Anchors = []
     Caption = 'Barang Keluar'
     TabOrder = 0
-    ExplicitLeft = 17
-    ExplicitTop = 187
+    ExplicitLeft = 9
     object Label3: TLabel
       Left = 20
       Top = 40

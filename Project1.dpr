@@ -7,7 +7,6 @@ uses
   lpbarangmsk in 'lpbarangmsk.pas' {FLaporanmasuk},
   lpbarangklr in 'lpbarangklr.pas' {FLaporankeluar},
   barangklr in 'barangklr.pas' {FBarangkeluar},
-  StockUtils in 'StockUtils.pas',
   barangmsk in 'barangmsk.pas' {FBarangmasuk};
 
 {$R *.res}

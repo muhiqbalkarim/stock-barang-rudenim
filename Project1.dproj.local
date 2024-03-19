@@ -2,27 +2,27 @@
 <BorlandProject>
 	<Transactions>
     <Transaction>2024/03/05 21:21:48.000.873,=C:\Users\muhiq\OneDrive\Dokumen\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
-    <Transaction>2024/03/05 21:27:49.000.752,C:\Users\muhiq\OneDrive\Dokumen\stock-barang-rudenim\Unit1.pas=C:\Users\muhiq\OneDrive\Dokumen\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
-    <Transaction>2024/03/05 21:27:49.000.752,C:\Users\muhiq\OneDrive\Dokumen\stock-barang-rudenim\Unit1.dfm=C:\Users\muhiq\OneDrive\Dokumen\Embarcadero\Studio\Projects\Unit1.dfm</Transaction>
-    <Transaction>2024/03/05 21:27:52.000.780,C:\Users\muhiq\OneDrive\Dokumen\stock-barang-rudenim\Project1.dproj=C:\Users\muhiq\OneDrive\Dokumen\Embarcadero\Studio\Projects\Project1.dproj</Transaction>
+    <Transaction>2024/03/05 21:27:49.000.752,C:\Users\muhiq\OneDrive\Dokumen\Embarcadero\Studio\Projects\Unit1.pas=C:\Users\muhiq\OneDrive\Dokumen\stock-barang-rudenim\Unit1.pas</Transaction>
+    <Transaction>2024/03/05 21:27:49.000.752,C:\Users\muhiq\OneDrive\Dokumen\Embarcadero\Studio\Projects\Unit1.dfm=C:\Users\muhiq\OneDrive\Dokumen\stock-barang-rudenim\Unit1.dfm</Transaction>
+    <Transaction>2024/03/05 21:27:52.000.780,C:\Users\muhiq\OneDrive\Dokumen\Embarcadero\Studio\Projects\Project1.dproj=C:\Users\muhiq\OneDrive\Dokumen\stock-barang-rudenim\Project1.dproj</Transaction>
     <Transaction>2024/03/07 10:07:44.000.086,=C:\Users\muhiq\OneDrive\Dokumen\Embarcadero\Studio\Projects\stock-barang-rudenim\Unit2.pas</Transaction>
     <Transaction>2024/03/07 10:09:18.000.248,=C:\Users\muhiq\OneDrive\Dokumen\Embarcadero\Studio\Projects\stock-barang-rudenim\Unit3.pas</Transaction>
     <Transaction>2024/03/07 10:09:43.000.292,=C:\Users\muhiq\OneDrive\Dokumen\Embarcadero\Studio\Projects\stock-barang-rudenim\Unit4.pas</Transaction>
     <Transaction>2024/03/11 03:20:38.000.309,=C:\Users\iB\OneDrive\Dokumen\Embarcadero\Studio\Projects\stock-barang-rudenim\Unit5.pas</Transaction>
-    <Transaction>2024/03/14 02:02:56.556,=C:\Users\iB\OneDrive\Dokumen\Embarcadero\Studio\Projects\stock-barang-rudenim\Unit6.pas</Transaction>
-    <Transaction>2024/03/14 02:04:13.383,C:\Users\iB\OneDrive\Dokumen\Embarcadero\Studio\Projects\stock-barang-rudenim\StockUtils.pas=C:\Users\iB\OneDrive\Dokumen\Embarcadero\Studio\Projects\stock-barang-rudenim\Unit6.pas</Transaction>
-    <Transaction>2024/03/14 05:04:56.385,C:\Users\iB\OneDrive\Dokumen\Embarcadero\Studio\Projects\stock-barang-rudenim\stockbarang.pas=C:\Users\iB\OneDrive\Dokumen\Embarcadero\Studio\Projects\stock-barang-rudenim\Unit1.pas</Transaction>
-    <Transaction>2024/03/14 05:04:56.385,C:\Users\iB\OneDrive\Dokumen\Embarcadero\Studio\Projects\stock-barang-rudenim\stockbarang.dfm=C:\Users\iB\OneDrive\Dokumen\Embarcadero\Studio\Projects\stock-barang-rudenim\Unit1.dfm</Transaction>
-    <Transaction>2024/03/14 05:05:22.598,C:\Users\iB\OneDrive\Dokumen\Embarcadero\Studio\Projects\stock-barang-rudenim\login.dfm=C:\Users\iB\OneDrive\Dokumen\Embarcadero\Studio\Projects\stock-barang-rudenim\Unit2.dfm</Transaction>
-    <Transaction>2024/03/14 05:05:22.598,C:\Users\iB\OneDrive\Dokumen\Embarcadero\Studio\Projects\stock-barang-rudenim\login.pas=C:\Users\iB\OneDrive\Dokumen\Embarcadero\Studio\Projects\stock-barang-rudenim\Unit2.pas</Transaction>
-    <Transaction>2024/03/14 05:05:51.911,C:\Users\iB\OneDrive\Dokumen\Embarcadero\Studio\Projects\stock-barang-rudenim\lpbarangmsk.dfm=C:\Users\iB\OneDrive\Dokumen\Embarcadero\Studio\Projects\stock-barang-rudenim\Unit3.dfm</Transaction>
-    <Transaction>2024/03/14 05:05:51.911,C:\Users\iB\OneDrive\Dokumen\Embarcadero\Studio\Projects\stock-barang-rudenim\lpbarangmsk.pas=C:\Users\iB\OneDrive\Dokumen\Embarcadero\Studio\Projects\stock-barang-rudenim\Unit3.pas</Transaction>
-    <Transaction>2024/03/14 05:06:09.796,C:\Users\iB\OneDrive\Dokumen\Embarcadero\Studio\Projects\stock-barang-rudenim\lpbarangklr.pas=C:\Users\iB\OneDrive\Dokumen\Embarcadero\Studio\Projects\stock-barang-rudenim\Unit4.pas</Transaction>
-    <Transaction>2024/03/14 05:06:09.796,C:\Users\iB\OneDrive\Dokumen\Embarcadero\Studio\Projects\stock-barang-rudenim\lpbarangklr.dfm=C:\Users\iB\OneDrive\Dokumen\Embarcadero\Studio\Projects\stock-barang-rudenim\Unit4.dfm</Transaction>
-    <Transaction>2024/03/14 05:06:38.255,C:\Users\iB\OneDrive\Dokumen\Embarcadero\Studio\Projects\stock-barang-rudenim\barangklr.dfm=C:\Users\iB\OneDrive\Dokumen\Embarcadero\Studio\Projects\stock-barang-rudenim\Unit5.dfm</Transaction>
-    <Transaction>2024/03/14 05:06:38.255,C:\Users\iB\OneDrive\Dokumen\Embarcadero\Studio\Projects\stock-barang-rudenim\barangklr.pas=C:\Users\iB\OneDrive\Dokumen\Embarcadero\Studio\Projects\stock-barang-rudenim\Unit5.pas</Transaction>
-    <Transaction>2024/03/14 05:06:54.130,=C:\Users\iB\OneDrive\Dokumen\Embarcadero\Studio\Projects\stock-barang-rudenim\Unit1.pas</Transaction>
-    <Transaction>2024/03/14 05:07:05.968,C:\Users\iB\OneDrive\Dokumen\Embarcadero\Studio\Projects\stock-barang-rudenim\barangmsk.dfm=C:\Users\iB\OneDrive\Dokumen\Embarcadero\Studio\Projects\stock-barang-rudenim\Unit1.dfm</Transaction>
-    <Transaction>2024/03/14 05:07:05.968,C:\Users\iB\OneDrive\Dokumen\Embarcadero\Studio\Projects\stock-barang-rudenim\barangmsk.pas=C:\Users\iB\OneDrive\Dokumen\Embarcadero\Studio\Projects\stock-barang-rudenim\Unit1.pas</Transaction>
+    <Transaction>2024/03/14 02:02:56.000.556,=C:\Users\iB\OneDrive\Dokumen\Embarcadero\Studio\Projects\stock-barang-rudenim\Unit6.pas</Transaction>
+    <Transaction>2024/03/14 02:04:13.000.383,C:\Users\iB\OneDrive\Dokumen\Embarcadero\Studio\Projects\stock-barang-rudenim\Unit6.pas=C:\Users\iB\OneDrive\Dokumen\Embarcadero\Studio\Projects\stock-barang-rudenim\StockUtils.pas</Transaction>
+    <Transaction>2024/03/14 05:04:56.000.385,C:\Users\iB\OneDrive\Dokumen\Embarcadero\Studio\Projects\stock-barang-rudenim\Unit1.dfm=C:\Users\iB\OneDrive\Dokumen\Embarcadero\Studio\Projects\stock-barang-rudenim\stockbarang.dfm</Transaction>
+    <Transaction>2024/03/14 05:04:56.000.385,C:\Users\iB\OneDrive\Dokumen\Embarcadero\Studio\Projects\stock-barang-rudenim\Unit1.pas=C:\Users\iB\OneDrive\Dokumen\Embarcadero\Studio\Projects\stock-barang-rudenim\stockbarang.pas</Transaction>
+    <Transaction>2024/03/14 05:05:22.000.598,C:\Users\iB\OneDrive\Dokumen\Embarcadero\Studio\Projects\stock-barang-rudenim\Unit2.dfm=C:\Users\iB\OneDrive\Dokumen\Embarcadero\Studio\Projects\stock-barang-rudenim\login.dfm</Transaction>
+    <Transaction>2024/03/14 05:05:22.000.598,C:\Users\iB\OneDrive\Dokumen\Embarcadero\Studio\Projects\stock-barang-rudenim\Unit2.pas=C:\Users\iB\OneDrive\Dokumen\Embarcadero\Studio\Projects\stock-barang-rudenim\login.pas</Transaction>
+    <Transaction>2024/03/14 05:05:51.000.911,C:\Users\iB\OneDrive\Dokumen\Embarcadero\Studio\Projects\stock-barang-rudenim\Unit3.pas=C:\Users\iB\OneDrive\Dokumen\Embarcadero\Studio\Projects\stock-barang-rudenim\lpbarangmsk.pas</Transaction>
+    <Transaction>2024/03/14 05:05:51.000.911,C:\Users\iB\OneDrive\Dokumen\Embarcadero\Studio\Projects\stock-barang-rudenim\Unit3.dfm=C:\Users\iB\OneDrive\Dokumen\Embarcadero\Studio\Projects\stock-barang-rudenim\lpbarangmsk.dfm</Transaction>
+    <Transaction>2024/03/14 05:06:09.000.796,C:\Users\iB\OneDrive\Dokumen\Embarcadero\Studio\Projects\stock-barang-rudenim\Unit4.dfm=C:\Users\iB\OneDrive\Dokumen\Embarcadero\Studio\Projects\stock-barang-rudenim\lpbarangklr.dfm</Transaction>
+    <Transaction>2024/03/14 05:06:09.000.796,C:\Users\iB\OneDrive\Dokumen\Embarcadero\Studio\Projects\stock-barang-rudenim\Unit4.pas=C:\Users\iB\OneDrive\Dokumen\Embarcadero\Studio\Projects\stock-barang-rudenim\lpbarangklr.pas</Transaction>
+    <Transaction>2024/03/14 05:06:38.000.255,C:\Users\iB\OneDrive\Dokumen\Embarcadero\Studio\Projects\stock-barang-rudenim\Unit5.pas=C:\Users\iB\OneDrive\Dokumen\Embarcadero\Studio\Projects\stock-barang-rudenim\barangklr.pas</Transaction>
+    <Transaction>2024/03/14 05:06:38.000.255,C:\Users\iB\OneDrive\Dokumen\Embarcadero\Studio\Projects\stock-barang-rudenim\Unit5.dfm=C:\Users\iB\OneDrive\Dokumen\Embarcadero\Studio\Projects\stock-barang-rudenim\barangklr.dfm</Transaction>
+    <Transaction>2024/03/14 05:06:54.000.130,=C:\Users\iB\OneDrive\Dokumen\Embarcadero\Studio\Projects\stock-barang-rudenim\Unit1.pas</Transaction>
+    <Transaction>2024/03/14 05:07:05.000.968,C:\Users\iB\OneDrive\Dokumen\Embarcadero\Studio\Projects\stock-barang-rudenim\Unit1.dfm=C:\Users\iB\OneDrive\Dokumen\Embarcadero\Studio\Projects\stock-barang-rudenim\barangmsk.dfm</Transaction>
+    <Transaction>2024/03/14 05:07:05.000.968,C:\Users\iB\OneDrive\Dokumen\Embarcadero\Studio\Projects\stock-barang-rudenim\Unit1.pas=C:\Users\iB\OneDrive\Dokumen\Embarcadero\Studio\Projects\stock-barang-rudenim\barangmsk.pas</Transaction>
   </Transactions>
 </BorlandProject>

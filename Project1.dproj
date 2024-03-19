@@ -121,7 +121,6 @@
             <Form>FBarangkeluar</Form>
             <FormType>dfm</FormType>
         </DCCReference>
-        <DCCReference Include="StockUtils.pas"/>
         <DCCReference Include="barangmsk.pas">
             <Form>FBarangmasuk</Form>
             <FormType>dfm</FormType>

@@ -2,8 +2,8 @@ object FStockbarang: TFStockbarang
   Left = 270
   Top = 27
   Caption = 'Stock Barang'
-  ClientHeight = 634
-  ClientWidth = 828
+  ClientHeight = 598
+  ClientWidth = 808
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -15,12 +15,12 @@ object FStockbarang: TFStockbarang
   OnClose = FormClose
   OnCreate = FormCreate
   DesignSize = (
-    828
-    634)
+    808
+    598)
   TextHeight = 15
   object Label1: TLabel
-    Left = 246
-    Top = 30
+    Left = 236
+    Top = 26
     Width = 325
     Height = 54
     Anchors = []
@@ -35,8 +35,8 @@ object FStockbarang: TFStockbarang
     ExplicitTop = 33
   end
   object Label2: TLabel
-    Left = 262
-    Top = 80
+    Left = 252
+    Top = 74
     Width = 291
     Height = 28
     Anchors = []
@@ -51,8 +51,8 @@ object FStockbarang: TFStockbarang
     ExplicitTop = 85
   end
   object Label6: TLabel
-    Left = 45
-    Top = 601
+    Left = 43
+    Top = 567
     Width = 5
     Height = 25
     Anchors = []
@@ -62,11 +62,12 @@ object FStockbarang: TFStockbarang
     Font.Name = 'Segoe UI'
     Font.Style = [fsBold]
     ParentFont = False
+    ExplicitLeft = 45
     ExplicitTop = 602
   end
   object Label7: TLabel
-    Left = 686
-    Top = 601
+    Left = 670
+    Top = 567
     Width = 5
     Height = 25
     Anchors = []
@@ -80,15 +81,13 @@ object FStockbarang: TFStockbarang
     ExplicitTop = 602
   end
   object GroupBox1: TGroupBox
-    Left = 23
-    Top = 178
+    Left = 13
+    Top = 156
     Width = 777
     Height = 423
     Anchors = []
     Caption = 'Stock Barang'
     TabOrder = 0
-    ExplicitLeft = 21
-    ExplicitTop = 177
     object Label3: TLabel
       Left = 20
       Top = 40
@@ -146,6 +145,12 @@ object FStockbarang: TFStockbarang
       Width = 745
       Height = 303
       DataSource = DataSource1
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -12
+      Font.Name = 'Segoe UI'
+      Font.Style = []
+      ParentFont = False
       TabOrder = 4
       TitleFont.Charset = DEFAULT_CHARSET
       TitleFont.Color = clWindowText
@@ -195,6 +200,9 @@ object FStockbarang: TFStockbarang
     Left = 128
     Top = 32
     object FDQuery1kd_brg: TStringField
+      Alignment = taCenter
+      DisplayLabel = 'Kode Barang'
+      DisplayWidth = 13
       FieldName = 'kd_brg'
       Origin = 'kd_brg'
       ProviderFlags = [pfInUpdate, pfInWhere, pfInKey]
@@ -202,14 +210,17 @@ object FStockbarang: TFStockbarang
       Size = 6
     end
     object FDQuery1nama_barang: TStringField
-      DisplayWidth = 85
+      DisplayLabel = 'Nama Barang'
+      DisplayWidth = 81
       FieldName = 'nama_barang'
       Origin = 'nama_barang'
       Required = True
       Size = 50
     end
     object FDQuery1jmlh_stock: TIntegerField
-      DisplayWidth = 9
+      Alignment = taCenter
+      DisplayLabel = 'Jumlah Stock'
+      DisplayWidth = 11
       FieldName = 'jmlh_stock'
       Origin = 'jmlh_stock'
       Required = True
